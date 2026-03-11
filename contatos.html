@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt">
+    <title> Fale connosco - Gracie Barra Amora </title>
+    <meta name="description" content="">
+    <meta name="locality" content="Portugal, Europa"> 
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f20d0d",
+                        "background-light": "#f8f5f5",
+                        "background-dark": "#221010",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<!-- Header / Navigation -->
+<header class="flex items-center bg-background-light dark:bg-background-dark p-4 border-b border-primary/20 sticky top-0 z-10">
+
+    
+ <img src="imagens/logo.png"  class="logo" alt="logotipo" width="8%"> 
+
+<h1 class="text-lg font-bold leading-tight tracking-tight flex-1 text-center pr-10 uppercase italic"> Gracie Barra Amora </h1>
+</header>
+<main class="flex-1 pb-24">
+<!-- Hero Section -->
+<section class="px-4 pt-8 pb-6">
+<h1 class="text-4xl font-bold tracking-tight text-slate-900 dark:text-slate-100 italic uppercase">
+                Fale <span class="text-primary">Conosco</span>
+</h1>
+<p class="text-slate-600 dark:text-slate-400 mt-2 text-base">
+                Pronto(a) para treinar? Agende a sua aula experimental ou tire suas dúvidas com a nossa equipe.
+            </p>
+</section>
+<!-- Form Section -->
+<section class="px-4 py-4">
+<form class="space-y-4">
+<div class="flex flex-col gap-1">
+<label class="text-sm font-medium text-slate-700 dark:text-slate-300">Nome Completo</label>
+<input class="form-input w-full rounded-lg border-primary/20 bg-white dark:bg-background-dark/50 text-slate-900 dark:text-slate-100 focus:border-primary focus:ring-primary h-12" placeholder="Ex: Anderson Silva" type="text"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="text-sm font-medium text-slate-700 dark:text-slate-300">E-mail</label>
+<input class="form-input w-full rounded-lg border-primary/20 bg-white dark:bg-background-dark/50 text-slate-900 dark:text-slate-100 focus:border-primary focus:ring-primary h-12" placeholder="seu@email.com" type="email"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="text-sm font-medium text-slate-700 dark:text-slate-300">Telefone / WhatsApp</label>
+<input class="form-input w-full rounded-lg border-primary/20 bg-white dark:bg-background-dark/50 text-slate-900 dark:text-slate-100 focus:border-primary focus:ring-primary h-12" placeholder="(+351) 912-345-678" type="tel"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="text-sm font-medium text-slate-700 dark:text-slate-300">Interesse Principal</label>
+<select class="form-select w-full rounded-lg border-primary/20 bg-white dark:bg-background-dark/50 text-slate-900 dark:text-slate-100 focus:border-primary focus:ring-primary h-12">
+<option value="bjj">Brazilian Jiu-Jitsu (BJJ)</option>
+<option value="muay-thai">Muay Thai</option>
+<option value="boxing">Boxe</option>
+<option value="outros">Outras Dúvidas</option>
+</select>
+</div>
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-lg uppercase tracking-widest transition-colors mt-4" type="submit">
+                    Enviar Mensagem
+                </button>
+</form>
+</section>
+<!-- Contact Info Cards -->
+<section class="px-4 py-8 space-y-6">
+<div class="grid grid-cols-1 gap-4">
+<!-- WhatsApp -->
+<a class="flex items-center p-4 rounded-xl border border-primary/20 bg-primary/5 hover:bg-primary/10 transition-colors" href="#">
+<div class="bg-primary text-white p-3 rounded-lg mr-4">
+<span class="material-symbols-outlined">chat</span>
+</div>
+<div>
+<p class="text-xs text-primary font-bold uppercase">WhatsApp</p>
+<p class="text-lg font-semibold"> +351 926 854 285 </p>
+</div>
+</a>
+<!-- Address -->
+<div class="flex items-center p-4 rounded-xl border border-primary/20 bg-background-light dark:bg-background-dark">
+<div class="bg-primary/20 text-primary p-3 rounded-lg mr-4">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<div>
+<p class="text-xs text-primary font-bold uppercase">Localização</p>
+<p class="text-base"> Rua do Alentejo 1A, 2845-092, Amora </p>
+</div>
+</div>
+<!-- Hours -->
+<div class="flex items-center p-4 rounded-xl border border-primary/20 bg-background-light dark:bg-background-dark">
+<div class="bg-primary/20 text-primary p-3 rounded-lg mr-4">
+<span class="material-symbols-outlined">schedule</span>
+</div>
+<div>
+<p class="text-xs text-primary font-bold uppercase">Horário de Funcionamento</p>
+<p class="text-sm">Seg - Sex: 11:00 às 13:00 | 17:00 às 21:30</p>
+<p class="text-sm">Sáb: 11:00 às 13:00</p>
+</div>
+</div>
+</div>
+</section>
+
+</main>
+
+<!-- Footer -->
+<footer class="bg-background-dark py-16 px-4 border-t border-primary/10">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-2 mb-6">
+
+
+<img src="imagens/logo.png"  class="logo" alt="logotipo" width="10%"> 
+<span class="font-bold text-xl text-white tracking-tight">Gracie Barra <span class="text-primary">Amora</span></span>
+</div>
+<p class="text-slate-400 mb-6">Excelência no ensino das artes marciais. Transformando vidas através da disciplina e do esporte.</p>
+
+</div>
+
+<div>
+<h4 class="text-white font-bold mb-6 text-lg">Contato</h4>
+<ul class="space-y-4 text-slate-400">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<span>Rua do Alentejo 1A 2845-039, Amora</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">phone</span>
+<span> +351 969 378 578  </span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">mail</span>
+<span> graciebarraamora@gmail.com</span>
+</li>
+</ul>
+</div>
+
+</div>
+<div class="max-w-7xl mx-auto mt-16 pt-8 border-t border-white/5 text-center text-slate-500 text-sm">
+            © 2026 Gracie Barra Amora. Todos os direitos reservados.
+        </div>
+</footer>
+
+
+
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 w-full bg-background-light dark:bg-background-dark border-t border-primary/20 px-4 pb-4 pt-2 z-20">
+<div class="flex gap-2 max-w-lg mx-auto">
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined">home</span>
+<p class="text-[10px] font-medium uppercase tracking-tighter">Início</p>
+</a>
+
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-500 dark:text-slate-400" href="horario.html">
+<span class="material-symbols-outlined">calendar_month</span>
+<p class="text-[10px] font-medium uppercase tracking-tighter">Horários</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined">mail</span>
+<p class="text-[10px] font-medium uppercase tracking-tighter font-bold">Contato</p>
+</a>
+</div>
+</nav>
+</body></html>
