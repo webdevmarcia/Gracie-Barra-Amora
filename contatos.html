@@ -56,32 +56,39 @@
 </section>
 <!-- Form Section -->
 <section class="px-4 py-4">
-<form class="space-y-4">
-<div class="flex flex-col gap-1">
-<label class="text-sm font-medium text-slate-700 dark:text-slate-300">Nome Completo</label>
-<input class="form-input w-full rounded-lg border-primary/20 bg-white dark:bg-background-dark/50 text-slate-900 dark:text-slate-100 focus:border-primary focus:ring-primary h-12" placeholder="Ex: Anderson Silva" type="text"/>
-</div>
-<div class="flex flex-col gap-1">
-<label class="text-sm font-medium text-slate-700 dark:text-slate-300">E-mail</label>
-<input class="form-input w-full rounded-lg border-primary/20 bg-white dark:bg-background-dark/50 text-slate-900 dark:text-slate-100 focus:border-primary focus:ring-primary h-12" placeholder="seu@email.com" type="email"/>
-</div>
-<div class="flex flex-col gap-1">
-<label class="text-sm font-medium text-slate-700 dark:text-slate-300">Telefone / WhatsApp</label>
-<input class="form-input w-full rounded-lg border-primary/20 bg-white dark:bg-background-dark/50 text-slate-900 dark:text-slate-100 focus:border-primary focus:ring-primary h-12" placeholder="(+351) 912-345-678" type="tel"/>
-</div>
-<div class="flex flex-col gap-1">
-<label class="text-sm font-medium text-slate-700 dark:text-slate-300">Interesse Principal</label>
-<select class="form-select w-full rounded-lg border-primary/20 bg-white dark:bg-background-dark/50 text-slate-900 dark:text-slate-100 focus:border-primary focus:ring-primary h-12">
-<option value="bjj">Brazilian Jiu-Jitsu (BJJ)</option>
-<option value="muay-thai">Muay Thai</option>
-<option value="boxing">Boxe</option>
-<option value="outros">Outras Dúvidas</option>
-</select>
-</div>
-<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-lg uppercase tracking-widest transition-colors mt-4" type="submit">
-                    Enviar Mensagem
-                </button>
+
+<form id="form" class="space-y-4">
+  <div class="flex flex-col gap-1">
+    <label class="text-sm font-medium text-slate-700 dark:text-slate-300">Nome Completo</label>
+    <input class="form-input w-full rounded-lg border-primary/20 bg-white dark:bg-background-dark/50 text-slate-900 dark:text-slate-100 focus:border-primary focus:ring-primary h-12" placeholder="Ex: Anderson Silva" id="nome" required type="text"/>
+  </div>
+
+  <div class="flex flex-col gap-1">
+    <label class="text-sm font-medium text-slate-700 dark:text-slate-300">E-mail</label>
+    <input class="form-input w-full rounded-lg border-primary/20 bg-white dark:bg-background-dark/50 text-slate-900 dark:text-slate-100 focus:border-primary focus:ring-primary h-12" placeholder="seu@email.com" id="email" required type="email"/>
+  </div>
+
+  <div class="flex flex-col gap-1">
+    <label class="text-sm font-medium text-slate-700 dark:text-slate-300">Telefone / WhatsApp</label>
+    <input class="form-input w-full rounded-lg border-primary/20 bg-white dark:bg-background-dark/50 text-slate-900 dark:text-slate-100 focus:border-primary focus:ring-primary h-12" placeholder="912 345 678" id="telefone" required type="tel"/>
+  </div>
+
+  <div class="flex flex-col gap-1">
+    <label class="text-sm font-medium text-slate-700 dark:text-slate-300">Interesse Principal</label>
+    <select class="form-select w-full rounded-lg border-primary/20 bg-white dark:bg-background-dark/50 text-slate-900 dark:text-slate-100 focus:border-primary focus:ring-primary h-12" id="assunto" required>
+      <option value="Brazilian Jiu-Jitsu (BJJ)">Brazilian Jiu-Jitsu (BJJ)</option>
+      <option value="Muay Thai">Muay Thai</option>
+      <option value="Boxe">Boxe</option>
+      <option value="Outras Dúvidas">Outras Dúvidas</option>
+    </select>
+  </div>
+
+  <button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-lg uppercase tracking-widest transition-colors mt-4" type="submit">
+    Enviar Mensagem
+  </button>
 </form>
+
+  
 </section>
 <!-- Contact Info Cards -->
 <section class="px-4 py-8 space-y-6">
@@ -160,6 +167,7 @@
         </div>
 </footer>
 
+    
 
 
 <!-- Bottom Navigation Bar -->
@@ -180,4 +188,41 @@
 </a>
 </div>
 </nav>
+
+    <script>
+  document.getElementById("form").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const nome = document.getElementById("nome").value;
+    const telemovel = document.getElementById("telemovel").value;
+    const email = document.getElementById("email").value;
+    const assunto = document.getElementById("assunto").value;
+      
+
+    const numeroDestino = "+351932663895";
+
+    const texto =
+      `Nome: ${nome}%0A` +
+      `Telemóvel: ${telemovel}%0A` +
+        `Email: ${email}%0A` +
+      `Assunto: ${assunto}%0A`;
+
+    const url = `https://wa.me/${numeroDestino}?text=${texto}`;
+
+    window.open(url, "_blank");
+  });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+    
 </body></html>
